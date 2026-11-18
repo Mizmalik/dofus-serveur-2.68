@@ -1,0 +1,46 @@
+# Secrets
+.env
+
+# Bundles + zips clients (~5 GB chacun, générés par client/build.sh)
+client/build/
+OneAir-Windows
+OneAir.app
+client/dofus-darwin-2.68
+client/dofus-windows-2.68
+dist
+
+# Cache local (Swift SDK Darwin ~700 MB + assets Dofus officiels ~5 GB chacun
+# fetch via cytrus, modules go/swift téléchargés, etc.)
+**/.cache/
+
+# Build artifacts (toutes plateformes)
+**/bin/
+**/obj/
+**/.build/
+**/.swiftpm/
+*.dSYM/
+*.user
+server/build/
+server/run/
+server/logs/
+server/web/oneair-web
+
+# SwiftPM symlinks générés à la volée (cf. client/launcher/macos/Package.swift)
+client/launcher/macos/Sources/
+
+# Données runtime
+Dofus\ Stump.app/
+
+# Logs / backups
+*.log
+*.bak
+.DS_Store
+server/backups/*
+!server/backups/.gitkeep
+
+# IDE / editors
+.vscode/
+.idea/
+*.swp
+*~
+.claude/settings.local.json
